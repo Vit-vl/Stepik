@@ -1,9 +1,8 @@
 lang = input('Выберите язык (рус - 1/en - 2): ') # выбор языка для шифорвания/дешифрования текста
 encrypt = input('Что будем делать: шифровать (1) или расшифровывать (2)?: ')
-#step = int(input('Введите шаг сдвига: '))
+step = int(input('Введите шаг сдвига: '))
 print('Хорошо. Напишите текст для обработки: ')
-text = input().split()
-print(text)
+text = input()
 
 
 def encryption_en(text):
@@ -20,7 +19,6 @@ def encryption_en(text):
                 text_new += chr(ord(i) - (26 - step))
             else:
                 text_new += i
-        text_new += ' '
     return text_new
 
 
